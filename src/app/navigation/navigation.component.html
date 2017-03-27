@@ -1,0 +1,29 @@
+<nav class="navbar navbar-inverse bg-inverse navbar-fixed-top navbar-toggleable-sm">
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" (click)="isCollapsed = !isCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img alt="Logo" src="../../assets/images/logo.png">
+  </a>
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/home']">Transactions</a>
+      </li>
+
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/about']">{{ 'ABOUT' | translate }}</a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>
+
+
+ 
